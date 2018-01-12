@@ -29,6 +29,12 @@ class ViewController: UIViewController{
         
     }
 
+    @IBAction func nextButtonAction(_ sender: Any) {
+        let indexPaths:NSArray = self.collectionView .indexPathsForSelectedItems! as NSArray
+        for index in indexPaths {
+            print(contentArray[(index as! IndexPath).row])
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
